@@ -1,4 +1,6 @@
 ﻿using System.Collections.ObjectModel;
+using System.ComponentModel;
+using System.Runtime.CompilerServices;
 using FriendOrganizer.Model;
 using FriendOrganizer.UI.Data;
 
@@ -8,6 +10,8 @@ namespace FriendOrganizer.UI.ViewModel
     {
         private IFriendDataService _friendDataService;
         private Friend _selectedFriend;
+
+        public event PropertyChangedEventHandler PropertyChanged;
 
         public MainViewModel(IFriendDataService friendDataService)
         {
